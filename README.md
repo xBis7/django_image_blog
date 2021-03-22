@@ -1,6 +1,6 @@
 # django_image_blog
 
-This is a project created for a university assignment. It's a simpler version of Instagram, a blog created with Django Python in which you can create a user account, a profile and make new posts by uploading images. There is also an admin page, in which anyone with admin credentials can login and manage the blog. 
+This is a project created for a university assignment. It's a simpler version of Instagram, a blog created with Django Python in which you can create a user account and a profile and make new posts by uploading images. There is also an admin page, in which anyone with admin credentials can login and manage the blog. 
 
 I have listed the commands i used for installing Django and Python and for developing this project. I have also listed the commands that someone needs to run in order, for the project, to work in his system.
 
@@ -255,7 +255,8 @@ go to terminal and type
 
 
 
-
+    
+                        
 ---------->     TERMINAL COMMANDS YOU NEED TO RUN TO CHECK THIS PROJECT IN YOUR SYSTEM     <----------
 
 ○ update the local APT repository 

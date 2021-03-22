@@ -36,8 +36,7 @@ it shows the version of installed python
     
     ~$ pip3 -V
 
-○ install a virtual environment to contain all Python
-packages and software including django
+○ install a virtual environment to contain all Python packages and software including django
 
     ~$ pip3 install virtualenv
 
@@ -181,7 +180,10 @@ stop the server from running with CTRL + C
 <---------------------------------------------------------->
 
 ○ inside your virtualenv
-○ install crispy forms to make your templates look nicer ~$ pip3 install django-crispy-forms
+○ install crispy forms to make your templates look nicer 
+
+    ~$ pip3 install django-crispy-forms
+
 ○ install GitHub
     
     ~$ sudo apt-get install git
@@ -253,135 +255,176 @@ go to terminal and type
 ---------->     TERMINAL COMMANDS YOU NEED TO RUN TO CHECK THIS PROJECT IN YOUR SYSTEM     <----------
 
 ○ update the local APT repository 
-~$ sudo apt-get update && sudo apt-get -y upgrade
+
+    ~$ sudo apt-get update && sudo apt-get -y upgrade
 
 ○ install python3
-~$ sudo apt-get install python3
+
+    ~$ sudo apt-get install python3
 
 ○ check if python was successfully installed
-~$ python3 -V
+
+    ~$ python3 -V
+
 it shows the version of installed python
 
 ○ install pip with root command
-~$ sudo apt-get install -y python3-pip
+
+    ~$ sudo apt-get install -y python3-pip
 
 ○ check if pip was successfully installed
-~$ pip3 -V
+    
+    ~$ pip3 -V
 
-○ install a virtual environment to contain all Python
-packages and software including django
-~$ pip3 install virtualenv
+○ install a virtual environment to contain all Python packages and software including django
+
+    ~$ pip3 install virtualenv
 
 ○ check if virtualenv was successfully installed
-~$ virtualenv --version
+
+    ~$ virtualenv --version
 
 ○ create a django-apps directory 
-~$ cd Home
-~$ mkdir django-apps 
-~$ cd django-apps
+
+    ~$ cd Home
+    ~$ mkdir django-apps 
+    ~$ cd django-apps
 
 ○ inside django-apps directory create a virtual environment 
-~$ virtualenv env
+
+    ~$ virtualenv env
 
 ○ activate the virtual env 
-~$ . env/bin/activate
+
+    ~$ . env/bin/activate
+
 now the prefix is changed to (env)
 
 ○ inside the env install django
-~$ pip3 install django
+    
+    ~$ pip3 install django
 
 ○ check if django was successfully installed
-~$ django-admin --version
+    
+    ~$ django-admin --version
 
 ○ open the port we’ll be using in our server’s firewall to view the django project 
-~$ sudo ufw allow 8000
+    
+    ~$ sudo ufw allow 8000
 
 move the django_pikpok directory inside the django-apps directory
 
 ○ create a MySQL database for the django project 
-~$ sudo apt install mysql-server
+    
+    ~$ sudo apt install mysql-server
 
 ○ go inside your virtual environment, activate it and create a connector to MySQL database 
-~$ cd django-apps 
-~$ . env/bin/activate
+
+    ~$ cd django-apps 
+    ~$ . env/bin/activate
 
 ○ make sure you have python3-dev installed
-~$ sudo apt install python3-dev
+
+    ~$ sudo apt install python3-dev
 
 ○ install the necessary Python and MySQL development headers and libraries 
-~$ sudo apt install python3-dev libmysqlclient-dev default-libmysqlclient-dev
+
+    ~$ sudo apt install python3-dev libmysqlclient-dev default-libmysqlclient-dev
 
 ○ install the mysqlclient library from PyPi 
-~$ pip3 install mysqlclient
+    
+    ~$ pip3 install mysqlclient
 
 ○ log in via the MySQL root 
-~$ sudo mysql -u root
+    
+    ~$ sudo mysql -u root
 
 ○ create a new database to load the files from our django database
 ○ Enter the MySQL shell 
-~$ mysql
-> CREATE DATABASE newdatabase;
+
+    ~$ mysql
+    > CREATE DATABASE newdatabase;
 
 ○ create a separate MySQL user account (djangouser) to operate the new database
-mysql> CREATE USER 'username'@'%' IDENTIFIED WITH mysql_native_password BY 'password';
+
+    mysql> CREATE USER 'username'@'%' IDENTIFIED WITH mysql_native_password BY 'password';
 
 ○ give djangouser complete access to the database
-mysql> GRANT ALL ON newdatabase.* TO 'username'@'%';
+
+    mysql> GRANT ALL ON newdatabase.* TO 'username'@'%';
 
 ○ flush the privileges for the database and the user account made for django
-mysql> FLUSH PRIVILEGES;
+
+    mysql> FLUSH PRIVILEGES;
+
 type CTRL + D to exit
 
 ○ exit the MySQL shell and type 
-~$ mysql -u [username] -p newdatabase < blog_data.sql
+
+    ~$ mysql -u [username] -p newdatabase < blog_data.sql
 
 ○ go back to MySQL shell and flush the privileges for the database and the user account made for django
-mysql> FLUSH PRIVILEGES;
+
+    mysql> FLUSH PRIVILEGES;
+
 type CTRL + D to exit
 
 ○ make database migrations inside the django-apps directory
-~$ python3 manage.py makemigrations 
-~$ python3 manage.py migratemysql
+
+    ~$ python3 manage.py makemigrations 
+    ~$ python3 manage.py migratemysql
 
 ○ restart MySQL 
-~$ sudo systemctl daemon-reload
-~$ sudo systemctl restart mysql
+
+    ~$ sudo systemctl daemon-reload
+    ~$ sudo systemctl restart mysql
 
 ○ make the migrations, run the server and the database is ready 
-~$ python3 manage.py makemigrations 
-~$ python3 manage.py migrate 
-~$ python3 manage.py runserver
+
+    ~$ python3 manage.py makemigrations 
+    ~$ python3 manage.py migrate 
+    ~$ python3 manage.py runserver
+
 stop the server from running with CTRL + C
 
 ○ inside your virtualenv install crispy forms to make your templates look nicer 
-~$ pip3 install django-crispy-forms
+    
+    ~$ pip3 install django-crispy-forms
 
 ○ install GitHub
-~$ sudo apt-get install git
+
+    ~$ sudo apt-get install git
 
 ○ install Bootstrap using NPM
 ○ create a clone of Bootstrap project from GitHub
-~$ git clone https://github.com/twbs/bootstrap.git
+
+    ~$ git clone https://github.com/twbs/bootstrap.git
 
 ○ install NPM
-~$ apt-get install npm
-~$ npm install bootstrap
+
+    ~$ apt-get install npm
+    ~$ npm install bootstrap
 
 ○ install Pillow to use ImageField in django and upload images 
-~$ pip3 install Pillow
+
+    ~$ pip3 install Pillow
 
 ○ create an admin account to make administrative changes and login to the admin page 
-~$ python3 manage.py createsuperuser
+
+    ~$ python3 manage.py createsuperuser
 
 ○ run the server 
-~$ python3 manage.py runserver
+
+    ~$ python3 manage.py runserver
 
 View the project by going to your browser and typing http://your-server-ip:8000/ or localhost:8000/
 
 ○ to make any changes via terminal in your django project : runserver,migrate,create new directory or file 
-~$ cd django-apps 
-~$ . env/bin/activate 
-~$ cd django_pikpok
+
+    ~$ cd django-apps 
+    ~$ . env/bin/activate 
+    ~$ cd django_pikpok
 
 **when you are done with your django project exit the virtual env with command
-~$ deactivate
+
+    ~$ deactivate

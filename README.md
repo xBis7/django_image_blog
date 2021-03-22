@@ -1,6 +1,6 @@
 # django_image_blog
 
-This is a project created for a university assignment. It's a simpler version of Instagram, a blog created with Django Python in which you can create a user account and make new posts by uploading images. There is also an admin page, in which anyone with admin credentials can login and manage the blog. 
+This is a project created for a university assignment. It's a simpler version of Instagram, a blog created with Django Python in which you can create a user account, a profile and make new posts by uploading images. There is also an admin page, in which anyone with admin credentials can login and manage the blog. 
 
 I have listed the commands i used for installing Django and Python and for developing this project. I have also listed the commands that someone needs to run in order, for the project, to work in his system.
 
@@ -100,7 +100,9 @@ now the prefix is changed to (env)
     ~$ pip3 install mysqlclient
 
 ○ create the database
+
 ○ configure Django backend for MySQL compatibility
+
 ○ log in via the MySQL root 
 
     ~$ sudo mysql -u root
@@ -180,6 +182,7 @@ stop the server from running with CTRL + C
 <---------------------------------------------------------->
 
 ○ inside your virtualenv
+
 ○ install crispy forms to make your templates look nicer 
 
     ~$ pip3 install django-crispy-forms
@@ -189,6 +192,7 @@ stop the server from running with CTRL + C
     ~$ sudo apt-get install git
 
 ○ install Bootstrap using NPM
+
 ○ create a clone of Bootstrap project from GitHub
 
     ~$ git clone https://github.com/twbs/bootstrap.git
@@ -340,6 +344,7 @@ move the django_pikpok directory inside the django-apps directory
     ~$ sudo mysql -u root
 
 ○ create a new database to load the files from our django database
+
 ○ Enter the MySQL shell 
 
     ~$ mysql
@@ -396,6 +401,7 @@ stop the server from running with CTRL + C
     ~$ sudo apt-get install git
 
 ○ install Bootstrap using NPM
+
 ○ create a clone of Bootstrap project from GitHub
 
     ~$ git clone https://github.com/twbs/bootstrap.git
